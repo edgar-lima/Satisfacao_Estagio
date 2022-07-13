@@ -65,7 +65,7 @@ Q1. Conheço as competências e os objetivos dos Estágios Curriculares do meu c
 ```{r}
 ggplot(resp, aes(2,Q1, fill= Conceito))+
   geom_bar(stat= "identity")+
-  geom_text(aes(label= paste0(round(Q1, 2), "%")), color= "white",
+  geom_text(aes(label= paste0(round(Q1, 1), "%")), color= "white",
             position= position_stack(vjust= .4), size= 5)+
   scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
                                "blue")) +
@@ -82,7 +82,7 @@ Q2. Conheço as competências e os objetivos do Estágio em Campos de Atuação 
 ```{r}
 ggplot(resp, aes(2,Q2, fill= Conceito))+
   geom_bar(stat= "identity")+
-  geom_text(aes(label= paste0(round(Q2, 2), "%")), color= "white",
+  geom_text(aes(label= paste0(round(Q2, 1), "%")), color= "white",
             position= position_stack(vjust= .4), size= 5)+
   scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
                                "blue")) +
@@ -93,4 +93,109 @@ ggplot(resp, aes(2,Q2, fill= Conceito))+
           legend.title = element_text(size = 18),
           legend.text = element_text(size = 12))
 ```
+
+
+Q3. Conheço todos os campos de atuação profissional da minha formação acadêmica.
+```{r}
+ggplot(resp, aes(2,Q3, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q3, 1), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+
+```
+
+
+Q4. O estágio realizado fora da minha instituição de ensino (em campo) fornece maior atuação no campo profissional.
+```{r}
+ggplot(resp, aes(2,Q4, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q4, 1), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+
+```
+
+Q5. O estágio realizado em formato de palestras com profissionais do mercado fornece maior atuação no campo da profissão farmacêutica
+```{r}
+ggplot(resp, aes(2,Q5, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q5, 1), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+
+```
+
+Q6. Os temas abordados nas palestras foram relevantes para minha atuação profissional.
+```{r}
+ggplot(resp, aes(2,Q6, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q6, 1), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+
+```
+
+
+Q7. O formato remoto das palestras tornou minha participação mais efetiva.
+```{r}
+ggplot(resp, aes(2,Q7, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q7, 1), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+
+```
+
+Q9. O cronograma semanal tornou minha participação mais efetiva.
+```{r}
+ggplot(resp, aes(2,Q8, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q8, 1), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+```
+
 
