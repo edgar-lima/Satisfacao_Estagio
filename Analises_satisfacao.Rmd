@@ -198,4 +198,19 @@ ggplot(resp, aes(2,Q8, fill= Conceito))+
           legend.text = element_text(size = 12))
 ```
 
+# 3. Análise de text mining
+
+3.1 Carregando os pacotes de text mining.
+```{r}
+
+```
+
+
+3.2 Retirando a coluna com os termos.
+```{r}
+ncol(dados)
+tdados<-dados[,32]
+tdados2<- tdados[which(is.na(tdados)+1 == 1)]
+tdados2
+```
 
