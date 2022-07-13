@@ -1,0 +1,22 @@
+---
+title: "Pesquisa de Satisfação do Estágio"
+author: "Prof. MSc. Edgar Luiz de Lima"
+date: "13/07/2022"
+output: html_document
+---
+
+# 1. Preparação do ambiente e dos dados
+
+1.1 Carregando os pacotes.
+```{r}
+library(openxlsx)
+library(ggplot2)
+library(tidyr)
+library(ggpubr)
+```
+
+1.2 Carregando o conjunto de dados.
+```{r}
+dados<- read.xlsx("satisfacao.xlsx")
+View(dados)
+```
