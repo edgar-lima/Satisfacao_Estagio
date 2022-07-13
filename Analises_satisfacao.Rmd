@@ -59,4 +59,38 @@ names(resp)<- c("Conceito","Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8")
 View(resp)
 ```
 
-# Construindo as figuras
+# 2. Análise gráfica dos resultados
+
+Q1. Conheço as competências e os objetivos dos Estágios Curriculares do meu curso.
+```{r}
+ggplot(resp, aes(2,Q1, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q1, 2), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+```
+
+
+Q2. Conheço as competências e os objetivos do Estágio em Campos de Atuação Profissional do meu curso.
+```{r}
+ggplot(resp, aes(2,Q2, fill= Conceito))+
+  geom_bar(stat= "identity")+
+  geom_text(aes(label= paste0(round(Q2, 2), "%")), color= "white",
+            position= position_stack(vjust= .4), size= 5)+
+  scale_fill_manual(values = c("darkorange","cyan4","darkred","purple",
+                               "blue")) +
+   xlim(0, 2.5) +
+   coord_polar(theta = "y", start = 1) +
+    theme_void() +
+    theme(legend.position = c(1.1, .6),
+          legend.title = element_text(size = 18),
+          legend.text = element_text(size = 12))
+```
+
